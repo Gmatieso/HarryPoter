@@ -15,7 +15,7 @@ class HarryPotterService @Inject constructor(private val harryPoterAPI: HarryPot
             characters.body()?: emptyList()
         }
     }
-
+    //retrieve a specificCharacterModel object by its house from an API using Retrofit and Coroutine's
     suspend fun getCharacterById(house: String): SpecificCharacterModel {
         return withContext(Dispatchers.IO) {
             val characters = harryPoterAPI.getCharacterById(house)
