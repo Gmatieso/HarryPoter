@@ -1,6 +1,7 @@
 package com.example.harrypotter.data.remote
 
 import com.example.harrypotter.data.remote.models.CharacterModel
+import com.example.harrypotter.data.remote.models.SpecificCharacterModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
@@ -12,6 +13,13 @@ class HarryPotterService @Inject constructor(private val harryPoterAPI: HarryPot
         return withContext(Dispatchers.IO) {
             val characters = harryPoterAPI.getCharacter()
             characters.body()?: emptyList()
+        }
+    }
+
+    suspend fun getCharacterById(house: String): SpecificCharacterModel {
+        return withContext(Dispatchers.IO) {
+            val characters = harryPoterAPI.getCharacterById(house)
+            characters.body()!!
         }
     }
 }
