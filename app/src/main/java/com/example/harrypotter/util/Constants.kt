@@ -7,7 +7,7 @@ class Constants {
 
         const val BASE_URL = "https://hp-api.onrender.com/api/"
         const val CHARACTERS_ENDPOINT = "characters"
-        const val CHARACTERS_ID_ENDPOINT = "house?id="
+        const val CHARACTERS_ID_ENDPOINT = "house?id="   /*TODO  remove me */
 
 
         const val STUDENTS_ENDPOINT = "characters/students"
