@@ -1,6 +1,6 @@
 package com.example.harrypotter.di
 
-import com.example.harrypotter.data.remote.HarryPoterAPI
+import com.example.harrypotter.data.remote.HarryPotterApi
 import com.example.harrypotter.data.remote.MyInterceptor
 import com.example.harrypotter.util.Constants.Companion.BASE_URL
 import dagger.Module
@@ -45,8 +45,8 @@ object RetrofitModule {
     @Singleton
     @Provides
     //providesHarryPoterAPI
-    fun providesHarryPoter(retrofit: Retrofit): HarryPoterAPI{
-        return retrofit.create(HarryPoterAPI::class.java)
+    fun providesHarryPoter(retrofit: Retrofit): HarryPotterApi{
+        return retrofit.create(HarryPotterApi::class.java)
     }
 
 //    @Provides
