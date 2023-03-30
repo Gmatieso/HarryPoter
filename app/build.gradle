@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
+    id 'org.jetbrains.kotlin.plugin.serialization'
 }
 
 android {
@@ -50,18 +51,57 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
-    implementation 'androidx.activity:activity-compose:1.3.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.activity:activity-compose:1.7.0'
     implementation "androidx.compose.ui:ui:$compose_ui_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
-    implementation 'androidx.compose.material:material:1.2.0'
+    implementation 'androidx.compose.material:material:1.4.0'
+
+    //  Kotlin Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
+
+    //  Shimmer
+    implementation 'com.valentinilk.shimmer:compose-shimmer:1.0.4'
+
+    //  Palette api
+    implementation('androidx.palette:palette:1.0.0')
+
+    //  accompanist libraru
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.28.0"
+    //  Pager Library
+    implementation "com.google.accompanist:accompanist-pager:0.19.0"
+    // If using indicators, also depend on
+    implementation "com.google.accompanist:accompanist-pager-indicators:0.19.0"
+
+    //  coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+
+    //  lifecycle scope
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+
+
+    //  material icons
+    implementation "androidx.compose.material:material-icons-extended:1.4.0"
+
+    //  splash screen api
+    implementation("androidx.core:core-splashscreen:1.0.0")
+
+    //  lottie
+    implementation 'com.airbnb.android:lottie-compose:5.0.3'
+
+    //  intro showcase for app walkthrough
+    implementation 'com.canopas.intro-showcase-view:introshowcaseview:1.0.7'
+
+    //  Preferences DataStore
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
 
     //Retrofit2
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     //Coil
-    implementation("io.coil-kt:coil-compose:2.1.0")
+    implementation("io.coil-kt:coil-compose:2.2.2")
 
     // Compose Navigation
     implementation 'androidx.navigation:navigation-compose:2.5.3'
@@ -77,8 +117,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
 
     // Dagger Hilt
-    implementation "com.google.dagger:hilt-android:2.43.2"
-    kapt "com.google.dagger:hilt-android-compiler:2.43.2"
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-android-compiler:2.44"
 
     //Test
     testImplementation 'junit:junit:4.13.2'
