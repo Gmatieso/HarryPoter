@@ -21,7 +21,7 @@ methods and properties that a class can implement
 i.e a contract/set of requirements that a class must adhere to
  */
 
-interface HarryPoterAPI {
+interface HarryPotterApi {
     //retrofit2.http GET
     //get all characters
     @GET(CHARACTERS_ENDPOINT)
