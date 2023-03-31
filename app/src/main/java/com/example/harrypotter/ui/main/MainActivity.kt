@@ -1,4 +1,4 @@
-package com.example.harrypotter
+package com.example.harrypotter.ui.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,6 +10,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.rememberNavController
+import com.example.harrypotter.ui.nav.SetupNavHost
 import com.example.harrypotter.ui.theme.HarryPotterTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,22 +25,15 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colors.background
+                    ) {
+                        val navController = rememberNavController()
+                        SetupNavHost(navController = navController, harryPotterViewModel= viewModel())
+                    }
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    HarryPotterTheme {
-        Greeting("Android")
     }
 }
