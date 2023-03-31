@@ -3,9 +3,10 @@ package com.example.harrypotter.data.remote
 import com.example.harrypotter.data.remote.models.CharacterModel
 import com.example.harrypotter.data.remote.models.SpecificCharacterModel
 import com.example.harrypotter.util.Constants.Companion.CHARACTERS_ENDPOINT
-import com.example.harrypotter.util.Constants.Companion.CHARACTERS_ID_ENDPOINT
+import com.example.harrypotter.util.Constants.Companion.HOUSES_ENDPOINT
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 
@@ -25,4 +26,10 @@ interface HarryPoterAPI {
     //  get character with specific id
     @GET(CHARACTERS_ENDPOINT)
     suspend fun getCharacterById(@Query(value = "Id") id: Int): Response<SpecificCharacterModel>
+
+    //  get characters in a house
+    @GET(HOUSES_ENDPOINT)
+    suspend fun getCharactersInHouse(
+        @Path("houseName") houseName:String
+    ): Response<List<CharacterModel>>
 }

@@ -22,4 +22,5 @@ class HarryPotterService @Inject constructor(private val harryPoterAPI: HarryPot
             characters.body()!!
         }
     }
+
 }
