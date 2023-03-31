@@ -1,5 +1,6 @@
 package com.example.harrypotter.data.remote.models
 
+/*TODO implement charactersHouse*/
 data class GetCharactersInHouseModel(
     val image: String,
     val name: String,

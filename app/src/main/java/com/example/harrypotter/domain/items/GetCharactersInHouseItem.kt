@@ -2,6 +2,7 @@ package com.example.harrypotter.domain.items
 
 import com.example.harrypotter.data.remote.models.GetCharactersInHouseModel
 
+/*TODO implement charactersHouse*/
 data class GetCharactersInHouseItem(
     val image: String,
     val name: String,
@@ -15,4 +16,4 @@ data class GetCharactersInHouseItem(
     val wizard: Boolean,
 )
 
-fun GetCharactersInHouseModel.toCharacterItem() = GetCharactersInHouseItem(image, name, species, gender, ancestry, house, dateOfBirth, eyeColour, hairColour, wizard)
+fun GetCharactersInHouseModel.toCharacterInHouseItem() = GetCharactersInHouseItem(image, name, species, gender, ancestry, house, dateOfBirth, eyeColour, hairColour, wizard)

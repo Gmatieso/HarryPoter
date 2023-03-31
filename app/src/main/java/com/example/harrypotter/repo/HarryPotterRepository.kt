@@ -1,10 +1,7 @@
 package com.example.harrypotter.repo
 
 import com.example.harrypotter.data.remote.HarryPotterService
-import com.example.harrypotter.domain.items.CharacterItem
-import com.example.harrypotter.domain.items.SpecificCharacterItem
-import com.example.harrypotter.domain.items.toCharacterItem
-import com.example.harrypotter.domain.items.toSpecificCharacterItem
+import com.example.harrypotter.domain.items.*
 import javax.inject.Inject
 
 class HarryPotterRepository @Inject constructor(private val harryPotterService: HarryPotterService) {
@@ -21,4 +18,10 @@ class HarryPotterRepository @Inject constructor(private val harryPotterService: 
     suspend fun getCharacterById(id:Int): SpecificCharacterItem {
         return harryPotterService.getCharacterById(id).toSpecificCharacterItem()
     }
+
+//    suspend fun getCharactersInHouseItem(house: String): List<GetCharactersInHouseItem> {
+//        return harryPotterService.getCharactersInHouse(house).map {
+//            it.toCharacterInHouseItem()
+//
+//    }
 }

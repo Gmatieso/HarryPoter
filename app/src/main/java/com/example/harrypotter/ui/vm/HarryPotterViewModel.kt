@@ -1,4 +1,74 @@
 package com.example.harrypotter.ui.vm
 
-class HarryPotterViewModel {
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.harrypotter.domain.GetCharacterByIdUseCase
+import com.example.harrypotter.domain.GetCharacterUseCase
+import com.example.harrypotter.domain.GetCharactersInHouse
+import com.example.harrypotter.domain.items.CharacterItem
+import com.example.harrypotter.domain.items.SpecificCharacterItem
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+class HarryPotterViewModel @Inject constructor(
+    private val getCharacterUseCase: GetCharacterUseCase,
+    private val getCharacterByIdUseCase: GetCharacterByIdUseCase,
+//    private val getCharactersInHouse: GetCharactersInHouse,
+): ViewModel() {
+
+    private val  _characters = MutableLiveData<List<CharacterItem>>()
+    val characters: LiveData<List<CharacterItem>> get() = _characters
+
+    private val  _character = MutableLiveData<SpecificCharacterItem>()
+    val character: LiveData<SpecificCharacterItem> get() = _character
+
+
+    /*TODO implement charactersHouse*/
+//    private val  _charactersHouse = MutableLiveData<List<CharacterItem>>()
+//    val charactersHouse: LiveData<List<CharacterItem>> get() = _characters
+
+    init {
+        getCharacters()
+    }
+
+    //Use kotlin coroutines to asynchronously fetch data from a remote datasource
+    // and update state viewModel
+    private fun getCharacters() {
+        //launch new coroutine in viewmodelScope
+        viewModelScope.launch {
+
+            try {
+                //fetch list of characters from a remote data source
+                val characters = getCharacterUseCase()
+                _characters.value = characters
+
+            } catch (_: Exception) {}   //if exception occurs caught using catch
+
+        }
+
+    }
+
+    fun getCharactersById(id: Int) {
+        //Coroutine is a lightweight thread that can suspend its execution
+        //uses ViewModelScope.launch to launch a coroutine
+        viewModelScope.launch {
+
+            try {
+
+                val character = getCharacterByIdUseCase(id)
+                _character.value = character
+
+            } catch (_: Exception) {}
+
+        }
+
+    }
+
+
+
+
+
+
 }
