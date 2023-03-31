@@ -22,5 +22,13 @@ class HarryPotterService @Inject constructor(private val harryPoterAPI: HarryPot
             characters.body()!!
         }
     }
+    //retrieve list of CharacterInHouse objects from an API using Retrofit library and corouti
+
+    suspend fun getCharactersInHouse(houseName: String) {
+        return withContext(Dispatchers.IO) {
+            val characters = harryPoterAPI.getCharactersInHouse(houseName)
+            characters.body()?: emptyList()
+        }
+    }
 
 }
