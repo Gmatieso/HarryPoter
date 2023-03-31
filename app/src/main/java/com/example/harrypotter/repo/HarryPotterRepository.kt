@@ -18,7 +18,7 @@ class HarryPotterRepository @Inject constructor(private val harryPotterService: 
         }
     }
 
-    suspend fun getCharacterById(house:String): SpecificCharacterItem {
-        return harryPotterService.getCharacterById(house).toSpecificCharacterItem()
+    suspend fun getCharacterById(id:Int): SpecificCharacterItem {
+        return harryPotterService.getCharacterById(id).toSpecificCharacterItem()
     }
 }

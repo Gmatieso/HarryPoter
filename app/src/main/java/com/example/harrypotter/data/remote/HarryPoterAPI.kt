@@ -21,5 +21,5 @@ interface HarryPoterAPI {
     suspend fun getCharacter(): Response<List<CharacterModel>>  //Coroutine call to a suspend function for network Request
 
     @GET(CHARACTERS_ID_ENDPOINT)
-    suspend fun getCharacterById(@Query(value = "house") house: String): Response<SpecificCharacterModel>
+    suspend fun getCharacterById(@Query(value = "Id") id: Int): Response<SpecificCharacterModel>
 }
