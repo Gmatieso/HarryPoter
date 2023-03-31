@@ -1,6 +1,7 @@
 package com.example.harrypotter.data.remote
 
 import com.example.harrypotter.data.remote.models.CharacterModel
+import com.example.harrypotter.data.remote.models.GetCharactersInHouseModel
 import com.example.harrypotter.data.remote.models.SpecificCharacterModel
 import com.example.harrypotter.util.Constants.Companion.CHARACTERS_ENDPOINT
 import com.example.harrypotter.util.Constants.Companion.HOUSES_ENDPOINT
@@ -31,5 +32,5 @@ interface HarryPoterAPI {
     @GET(HOUSES_ENDPOINT)
     suspend fun getCharactersInHouse(
         @Path("houseName") houseName:String
-    ): Response<List<CharacterModel>>
+    ): Response<List<GetCharactersInHouseModel>>
 }
