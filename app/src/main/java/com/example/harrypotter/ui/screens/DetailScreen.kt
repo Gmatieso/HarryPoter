@@ -20,13 +20,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
-import com.example.gameapp.ui.vm.GameViewModel
+import com.example.harrypotter.ui.vm.HarryPotterViewModel
 
 @Composable
-fun DetailScreen(id: String, gameViewModel: GameViewModel, navController: NavController) {
+fun DetailScreen(id: String, harryPotterViewModel: HarryPotterViewModel, navController: NavController) {
 
-    gameViewModel.getGameById(id.toInt())
-    val game = gameViewModel.game.observeAsState().value
+    harryPotterViewModel.getCharactersById(id.toInt())
+    val character = harryPotterViewModel.character.observeAsState().value
 
     LazyColumn{
 
@@ -46,20 +46,20 @@ fun DetailScreen(id: String, gameViewModel: GameViewModel, navController: NavCon
 
                     title = {
 
-                        Text(text = game?.title ?: "", fontWeight = FontWeight.Bold)
+                        Text(text = character?.name ?: "", fontWeight = FontWeight.Bold)
 
                     }
 
                 )
 
                 Image(
-                    painter = rememberImagePainter(game?.thumbnail),
+                    painter = rememberImagePainter(character?.image),
                     contentDescription = null,
                     contentScale = ContentScale.FillBounds,
                     modifier = Modifier.fillMaxWidth().height(300.dp)
                 )
 
-                Text(text = game?.description ?: "", modifier = Modifier.padding(10.dp))
+                Text(text = character?.species ?: "", modifier = Modifier.padding(10.dp))
 
             }
 
