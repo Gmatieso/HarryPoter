@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
-    id 'org.jetbrains.kotlin.plugin.serialization'
+//    id 'org.jetbrains.kotlin.plugin.serialization'
 }
 
 android {
@@ -40,7 +40,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0'
+        kotlinCompilerExtensionVersion '1.2.0'   //1.2.0   //1.4.4
     }
     packagingOptions {
         resources {
