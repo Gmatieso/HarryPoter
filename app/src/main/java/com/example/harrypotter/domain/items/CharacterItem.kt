@@ -3,6 +3,7 @@ package com.example.harrypotter.domain.items
 import com.example.harrypotter.data.remote.models.CharacterModel
 
 data class CharacterItem(
+    val id: Int,
     val image: String,
     val name: String,
     val species: String,
@@ -21,4 +22,4 @@ By creating this extension function, any CharacterModel object can now call the 
 to convert itself to CharacterItem object without having to write a separate converter function
  */
 
-fun CharacterModel.toCharacterItem() = CharacterItem(image, name, species, gender, ancestry, house, dateOfBirth, eyeColour, hairColour, wizard)
+fun CharacterModel.toCharacterItem() = CharacterItem(id,image, name, species, gender, ancestry, house, dateOfBirth, eyeColour, hairColour, wizard)

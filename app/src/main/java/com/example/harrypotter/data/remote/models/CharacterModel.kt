@@ -1,6 +1,7 @@
 package com.example.harrypotter.data.remote.models
 
 data class CharacterModel(
+    val id: Int,
     val image: String,
     val name: String,
     val species: String,
