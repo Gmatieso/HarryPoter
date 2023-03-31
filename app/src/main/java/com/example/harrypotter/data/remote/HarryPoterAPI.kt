@@ -17,9 +17,12 @@ i.e a contract/set of requirements that a class must adhere to
 
 interface HarryPoterAPI {
     //retrofit2.http GET
+
+    //  get all characters
     @GET(CHARACTERS_ENDPOINT)
     suspend fun getCharacter(): Response<List<CharacterModel>>  //Coroutine call to a suspend function for network Request
 
-    @GET(CHARACTERS_ID_ENDPOINT)
+    //  get character with specific id
+    @GET(CHARACTERS_ENDPOINT)
     suspend fun getCharacterById(@Query(value = "Id") id: Int): Response<SpecificCharacterModel>
 }
