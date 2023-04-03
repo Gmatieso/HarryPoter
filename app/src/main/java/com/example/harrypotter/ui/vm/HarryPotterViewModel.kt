@@ -6,12 +6,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.harrypotter.domain.GetCharacterByIdUseCase
 import com.example.harrypotter.domain.GetCharacterUseCase
-import com.example.harrypotter.domain.GetCharactersInHouse
 import com.example.harrypotter.domain.items.CharacterItem
 import com.example.harrypotter.domain.items.SpecificCharacterItem
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+
+@HiltViewModel
 class HarryPotterViewModel @Inject constructor(
     private val getCharacterUseCase: GetCharacterUseCase,
     private val getCharacterByIdUseCase: GetCharacterByIdUseCase,
@@ -19,9 +21,11 @@ class HarryPotterViewModel @Inject constructor(
 ): ViewModel() {
 
     private val  _characters = MutableLiveData<List<CharacterItem>>()
+    //expose to the outside world
     val characters: LiveData<List<CharacterItem>> get() = _characters
 
     private val  _character = MutableLiveData<SpecificCharacterItem>()
+    //expose to the outside world
     val character: LiveData<SpecificCharacterItem> get() = _character
 
 
