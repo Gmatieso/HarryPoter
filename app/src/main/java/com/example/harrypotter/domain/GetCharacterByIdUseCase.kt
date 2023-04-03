@@ -6,7 +6,7 @@ import com.example.harrypotter.repo.HarryPotterRepository
 import javax.inject.Inject
 
 class GetCharacterByIdUseCase @Inject constructor(private val harryPotterRepository: HarryPotterRepository) {
-    suspend operator fun invoke(id: Int): SpecificCharacterItem {
-        return harryPotterRepository.getCharacterById(id)
-    }
+//    suspend operator fun invoke(id: Int): SpecificCharacterItem {
+//        return harryPotterRepository.getCharacterById(id)
+//    }
 }

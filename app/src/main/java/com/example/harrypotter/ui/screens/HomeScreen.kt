@@ -18,11 +18,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.example.harrypotter.domain.items.CharacterItem
 import com.example.harrypotter.ui.nav.Screens
+import com.example.harrypotter.ui.theme.HarryPotterTheme
 import com.example.harrypotter.ui.vm.HarryPotterViewModel
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -32,7 +34,7 @@ fun HomeScreen(harryPotterViewModel: HarryPotterViewModel, navController: NavCon
 
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text(text = "Games App", fontWeight = FontWeight.Bold) })
+            TopAppBar(title = { Text(text = "Harry Potter", fontWeight = FontWeight.Bold) })
 
         }
     ) {
@@ -61,7 +63,6 @@ fun CharacterCard(character: CharacterItem, navController: NavController) {
             .clickable {
                 navController.navigate(Screens.Details.route + "/${character.id}")
             }
-
     ) {
 
         Row {
@@ -70,10 +71,14 @@ fun CharacterCard(character: CharacterItem, navController: NavController) {
                 painter = rememberImagePainter(character.image),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
-                modifier = Modifier.width(175.dp).height(115.dp)
+                modifier = Modifier
+                    .width(175.dp)
+                    .height(115.dp)
             )
 
-            Column(modifier = Modifier.padding(10.dp).align(Alignment.CenterVertically)) {
+            Column(modifier = Modifier
+                .padding(10.dp)
+                .align(Alignment.CenterVertically)) {
 
                 Text(text = character.name, fontWeight = FontWeight.Bold)
                 Text(text = character.species, maxLines = 2, overflow = TextOverflow.Ellipsis)
@@ -84,4 +89,12 @@ fun CharacterCard(character: CharacterItem, navController: NavController) {
 
     }
 
+}
+
+@Preview
+@Composable
+fun MyDessertClickerAppPreview() {
+    HarryPotterTheme {
+//        HomeScreen(harryPotterViewModel: HarryPotterViewModel, navController: NavController)
+    }
 }
