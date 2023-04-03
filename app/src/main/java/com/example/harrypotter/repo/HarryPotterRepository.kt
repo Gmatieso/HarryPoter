@@ -15,18 +15,18 @@ class HarryPotterRepository @Inject constructor(private val harryPoterAPI: Harry
    maps them to a list of CharacterItem object using map fun
     */
     companion object {
-         const val TAG = "HarryPotterRepository"
+        private const val TAG = "HarryPotterRepository"
     }
     suspend fun getCharacter(): List<CharacterItem> {
         return try {
             withContext(Dispatchers.IO) {
                 val characters = harryPoterAPI.getCharacter()
-                Log.d(HarryPotterService.TAG, "getCharacter: $characters")
+                Log.d(TAG, "getCharacter: $characters")
                 characters.body()?.map { it.toCharacterItem() }
                     ?: emptyList()
             }
         } catch (e:Exception) {
-            Log.d(HarryPotterService.TAG, "getCharacter: ${e.message}")
+            Log.d(TAG, "getCharacter: ${e.message}")
             return emptyList()
         }
     }

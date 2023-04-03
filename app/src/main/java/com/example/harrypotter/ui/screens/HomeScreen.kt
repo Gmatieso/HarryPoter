@@ -91,10 +91,4 @@ fun CharacterCard(character: CharacterItem, navController: NavController) {
 
 }
 
-@Preview
-@Composable
-fun MyDessertClickerAppPreview() {
-    HarryPotterTheme {
-//        HomeScreen(harryPotterViewModel: HarryPotterViewModel, navController: NavController)
-    }
-}
+

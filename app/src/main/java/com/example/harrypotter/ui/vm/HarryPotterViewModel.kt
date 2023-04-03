@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.harrypotter.domain.GetCharacterByIdUseCase
-import com.example.harrypotter.domain.GetCharacterUseCase
+import com.example.harrypotter.domain.use_case.GetCharacterByIdUseCase
+import com.example.harrypotter.domain.use_case.GetCharacterUseCase
 import com.example.harrypotter.domain.items.CharacterItem
 import com.example.harrypotter.domain.items.SpecificCharacterItem
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,7 +17,6 @@ import javax.inject.Inject
 class HarryPotterViewModel @Inject constructor(
     private val getCharacterUseCase: GetCharacterUseCase,
     private val getCharacterByIdUseCase: GetCharacterByIdUseCase,
-//    private val getCharactersInHouse: GetCharactersInHouse,
 ): ViewModel() {
 
     private val  _characters = MutableLiveData<List<CharacterItem>>()

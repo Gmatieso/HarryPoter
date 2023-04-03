@@ -1,4 +1,4 @@
-package com.example.harrypotter.domain
+package com.example.harrypotter.domain.use_case
 
 import com.example.harrypotter.domain.items.CharacterItem
 import com.example.harrypotter.domain.items.SpecificCharacterItem
