@@ -6,7 +6,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.harrypotter.ui.screens.DetailScreen
 import com.example.harrypotter.ui.screens.HomeScreen
-import com.example.harrypotter.ui.vm.HarryPotterViewModel
 import com.example.harrypotter.util.Constants.Companion.KEY_HOUSE_ID
 import com.example.harrypotter.util.Constants.Screens.DETAIL_SCREEN
 import com.example.harrypotter.util.Constants.Screens.HOME_SCREEN

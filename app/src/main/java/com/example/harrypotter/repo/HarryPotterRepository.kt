@@ -1,6 +1,5 @@
 package com.example.harrypotter.repo
 
-import com.example.harrypotter.data.remote.HarryPotterService
 import com.example.harrypotter.domain.items.*
 import javax.inject.Inject
 
