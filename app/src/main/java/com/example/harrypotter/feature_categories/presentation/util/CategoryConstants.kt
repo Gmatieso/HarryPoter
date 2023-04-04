@@ -1,4 +1,4 @@
-package com.example.harrypotter.feature_categories.presentation.components.util
+package com.example.harrypotter.feature_categories.presentation.util
 
 object CategoryConstants {
 

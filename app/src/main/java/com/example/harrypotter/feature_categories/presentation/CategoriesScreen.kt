@@ -8,7 +8,9 @@ import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.foundation.lazy.staggeredgrid.items
 import androidx.compose.foundation.lazy.staggeredgrid.rememberLazyStaggeredGridState
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.ModalBottomSheetState
+import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.School
@@ -22,18 +24,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.kenstarry.harrypotter.core.domain.model.BottomSheetEvents
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.domain.model.CoreEvents
-import com.kenstarry.harrypotter.core.presentation.viewmodel.CoreViewModel
-import com.kenstarry.harrypotter.feature_categories.presentation.components.CategoryTopBar
-import com.kenstarry.harrypotter.feature_categories.presentation.util.CategoryConstants
-import com.kenstarry.harrypotter.feature_home.domain.model.ResponseObserver
-import com.kenstarry.harrypotter.feature_home.presentation.components.CharacterItemAlt
-import com.kenstarry.harrypotter.feature_home.presentation.util.HomeConstants
-import com.kenstarry.harrypotter.navigation.Direction
+import com.example.harrypotter.data.remote.models.BottomSheetEvents
+import com.example.harrypotter.data.remote.models.CharacterModel
+import com.example.harrypotter.data.remote.models.CoreEvents
+import com.example.harrypotter.feature_categories.presentation.util.CategoryConstants
+import com.example.harrypotter.ui.vm.CoreViewModel
 import kotlinx.coroutines.CoroutineScope
 
 @OptIn(
