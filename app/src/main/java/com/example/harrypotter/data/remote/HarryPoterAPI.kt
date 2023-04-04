@@ -5,6 +5,7 @@ import com.example.harrypotter.data.remote.models.GetCharactersInHouseModel
 import com.example.harrypotter.data.remote.models.SpecificCharacterModel
 import com.example.harrypotter.util.Constants.Companion.CHARACTERS_ENDPOINT
 import com.example.harrypotter.util.Constants.Companion.HOUSES_ENDPOINT
+import com.example.harrypotter.util.Constants.Companion.STAFF_ENDPOINT
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -35,4 +36,8 @@ interface HarryPoterAPI {
     suspend fun getCharactersInHouse(
         @Path("houseName") houseName:String
     ): Response<List<GetCharactersInHouseModel>>
+
+    //  characters who are Hogwarts staff
+    @GET(STAFF_ENDPOINT)
+    suspend fun getAllStaff(): Response<List<CharacterModel>>
 }
