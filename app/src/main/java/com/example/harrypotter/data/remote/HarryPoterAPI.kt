@@ -8,6 +8,7 @@ import com.example.harrypotter.util.Constants.Companion.CHARACTERS_ENDPOINT
 import com.example.harrypotter.util.Constants.Companion.HOUSES_ENDPOINT
 import com.example.harrypotter.util.Constants.Companion.SPELLS_ENDPOINT
 import com.example.harrypotter.util.Constants.Companion.STAFF_ENDPOINT
+import com.example.harrypotter.util.Constants.Companion.STUDENTS_ENDPOINT
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -46,6 +47,10 @@ interface HarryPoterAPI {
     //  get all spells
     @GET(SPELLS_ENDPOINT)
     suspend fun getSpells(): Response<List<Spell>>
+
+    //  characters who are Hogwarts students
+    @GET(STUDENTS_ENDPOINT)
+    suspend fun getStudents(): Response<List<CharacterModel>>
 
 
 }
