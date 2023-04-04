@@ -26,7 +26,9 @@ interface HarryPoterAPI {
 
     //  get character with specific id
     @GET(CHARACTERS_ENDPOINT)
-    suspend fun getCharacterById(@Query(value = "Id") id: Int): Response<SpecificCharacterModel>
+    suspend fun getCharacter(
+        @Query("id") characterId: String
+    ) : Response<CharacterModel>
 
     //  get characters in a house
     @GET(HOUSES_ENDPOINT)
