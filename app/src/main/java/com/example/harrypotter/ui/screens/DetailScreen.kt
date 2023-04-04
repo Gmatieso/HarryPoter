@@ -25,7 +25,7 @@ import com.example.harrypotter.ui.vm.HarryPotterViewModel
 @Composable
 fun DetailScreen(id: String, harryPotterViewModel: HarryPotterViewModel, navController: NavController) {
 
-//    harryPotterViewModel.getCharactersById(id.toInt())
+    harryPotterViewModel.getCharactersById(id.toInt())
     val character = harryPotterViewModel.character.observeAsState().value
 
     LazyColumn{

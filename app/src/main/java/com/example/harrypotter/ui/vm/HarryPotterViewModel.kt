@@ -48,20 +48,20 @@ class HarryPotterViewModel @Inject constructor(
 
     }
 
-//    fun getCharactersById(id: Int) {
-//        //Coroutine is a lightweight thread that can suspend its execution
-//        //uses ViewModelScope.launch to launch a coroutine
-//        viewModelScope.launch {
-//
-//            try {
-//
-//                val character = getCharacterByIdUseCase(id)
-//                _character.value = character
-//
-//            } catch (_: Exception) {}
-//
-//        }
-//
-//    }
+    fun getCharactersById(id: Int) {
+        //Coroutine is a lightweight thread that can suspend its execution
+        //uses ViewModelScope.launch to launch a coroutine
+        viewModelScope.launch {
+
+            try {
+
+                val character = getCharacterByIdUseCase(id)
+                _character.value = character
+
+            } catch (_: Exception) {}
+
+        }
+
+    }
 
 }

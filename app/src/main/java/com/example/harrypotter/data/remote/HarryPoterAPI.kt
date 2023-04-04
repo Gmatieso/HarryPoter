@@ -22,7 +22,7 @@ interface HarryPoterAPI {
 
     //  get all characters
     @GET(CHARACTERS_ENDPOINT)
-    suspend fun getCharacter(): Response<List<CharacterModel>>  //Coroutine call to a suspend function for network Request
+    suspend fun getCharacters(): Response<List<CharacterModel>>  //Coroutine call to a suspend function for network Request
 
     //  get character with specific id
     @GET(CHARACTERS_ENDPOINT)
