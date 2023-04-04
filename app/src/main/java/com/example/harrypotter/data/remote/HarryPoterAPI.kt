@@ -40,4 +40,6 @@ interface HarryPoterAPI {
     //  characters who are Hogwarts staff
     @GET(STAFF_ENDPOINT)
     suspend fun getAllStaff(): Response<List<CharacterModel>>
+
+
 }
