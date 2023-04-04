@@ -1,6 +1,8 @@
 package com.example.harrypotter.di
 
 import com.example.harrypotter.data.remote.HarryPoterAPI
+import com.example.harrypotter.data.remote.MyInterceptor
+import com.example.harrypotter.domain.use_case.*
 import com.example.harrypotter.util.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -55,7 +57,7 @@ object RetrofitModule {
     @Provides
     @Singleton
     fun provideHarryPotterUseCases(
-        harryPotterApi: HarryPotterApi
+        harryPotterApi: HarryPoterAPI
     ) = HarryPotterUseCases(
         getCharacters = GetCharacters(harryPotterApi),
         getStudents = GetStudents(harryPotterApi),
