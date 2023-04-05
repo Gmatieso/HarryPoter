@@ -1,7 +1,7 @@
-package com.kenstarry.harrypotter.feature_home.domain.model
+package com.example.harrypotter.feature_home.domain.model
 
 import androidx.lifecycle.Observer
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.data.remote.models.CharacterModel
 import retrofit2.Response
 
 class ResponseObserver(
