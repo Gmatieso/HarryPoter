@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_main_screen.presentation
+package com.example.harrypotter.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -13,7 +13,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.canopas.lib.showcase.IntroShowCaseScaffold
-import com.kenstarry.harrypotter.core.presentation.viewmodel.CoreViewModel
+import com.example.harrypotter.ui.vm.CoreViewModel
 import com.kenstarry.harrypotter.feature_main_screen.presentation.components.bottom_nav.MainBottomNav
 import com.kenstarry.harrypotter.navigation.graphs.inner_graphs.MainInnerGraph
 import kotlinx.coroutines.CoroutineScope
