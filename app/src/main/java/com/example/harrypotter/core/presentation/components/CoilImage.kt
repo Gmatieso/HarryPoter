@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.presentation.components
+package com.example.harrypotter.core.presentation.components
 
 import android.content.Context
 import android.net.Uri
@@ -7,10 +7,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.semantics.Role.Companion.Image
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.kenstarry.harrypotter.R
+import com.example.harrypotter.R
 
 @Composable
 fun CoilImage(
