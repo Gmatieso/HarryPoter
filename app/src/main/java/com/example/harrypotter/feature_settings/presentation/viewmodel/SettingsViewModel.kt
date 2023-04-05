@@ -2,7 +2,7 @@ package com.kenstarry.harrypotter.feature_settings.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kenstarry.harrypotter.feature_settings.data.datastore.ThemePreference
+import com.example.harrypotter.feature_settings.data.datastore.ThemePreference
 import com.kenstarry.harrypotter.feature_settings.presentation.model.SettingsEvents
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
