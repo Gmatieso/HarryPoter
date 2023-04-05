@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_settings.presentation.components
+package com.example.harrypotter.feature_settings.presentation.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
@@ -11,7 +11,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.kenstarry.harrypotter.BuildConfig
+import com.example.harrypotter.BuildConfig
+
 
 @Composable
 fun SalutationSection() {
@@ -32,7 +33,7 @@ fun SalutationSection() {
         )
 
         Text(
-            text = "Made with Love, By Kenstarry",
+            text = "Made with Love, By Tech_G",
             fontSize = MaterialTheme.typography.bodyMedium.fontSize,
             fontWeight = FontWeight.SemiBold,
             color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.6f)
