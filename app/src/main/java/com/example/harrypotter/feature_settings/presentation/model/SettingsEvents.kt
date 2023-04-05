@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_settings.presentation.model
+package com.example.harrypotter.feature_settings.presentation.model
 
 sealed class SettingsEvents {
 
