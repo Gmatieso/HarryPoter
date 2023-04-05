@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.presentation.components
+package com.example.harrypotter.core.presentation.components
 
 import android.content.Context
 import android.net.Uri
@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Star
-import androidx.compose.material.icons.outlined.StarRate
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -17,7 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.kenstarry.harrypotter.R
+import com.example.harrypotter.R
+
 
 @Composable
 fun WizardImage(
