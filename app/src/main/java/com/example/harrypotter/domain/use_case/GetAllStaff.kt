@@ -1,10 +1,11 @@
 package com.example.harrypotter.domain.use_case
 
-import com.example.harrypotter.data.remote.HarryPoterAPI
+
+import com.kenstarry.harrypotter.core.data.HarryPotterApi
 
 
 class GetAllStaff(
-    private val harryPotterApi: HarryPoterAPI
+    private val harryPotterApi: HarryPotterApi
 ) {
     suspend operator fun invoke() = harryPotterApi.getAllStaff()
 }
