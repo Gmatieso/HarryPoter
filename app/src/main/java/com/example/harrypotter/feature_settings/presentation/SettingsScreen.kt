@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_settings.presentation
+package com.example.harrypotter.feature_settings.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -11,15 +11,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.kenstarry.harrypotter.core.presentation.util.Constants
 import com.kenstarry.harrypotter.feature_houses.presentation.components.HousesTopBar
-import com.kenstarry.harrypotter.feature_settings.presentation.components.SalutationSection
-import com.kenstarry.harrypotter.feature_settings.presentation.components.themes_section.ThemesSection
+import com.example.harrypotter.feature_settings.presentation.components.SalutationSection
+import com.example.harrypotter.feature_settings.presentation.components.themes_section.ThemesSection
 import com.kenstarry.harrypotter.feature_settings.presentation.viewmodel.SettingsViewModel
 import com.kenstarry.harrypotter.navigation.Direction
-import com.kenstarry.harrypotter.navigation.NavConstants
 import com.kenstarry.harrypotter.navigation.screens.BottomNavScreens
-import com.kenstarry.harrypotter.navigation.screens.Screens
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
