@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.presentation.components
+package com.example.harrypotter.core.presentation.components
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Spacer
