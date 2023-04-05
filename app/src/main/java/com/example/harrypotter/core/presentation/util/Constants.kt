@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.presentation.util
+package com.example.harrypotter.core.presentation.util
 
 class Constants {
 
