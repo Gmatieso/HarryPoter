@@ -1,12 +1,12 @@
-package com.kenstarry.harrypotter.navigation.graphs
+package com.example.harrypotter.navigation.graphs
 
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import com.kenstarry.harrypotter.core.presentation.viewmodel.CoreViewModel
-import com.kenstarry.harrypotter.navigation.NavConstants
+import com.example.harrypotter.navigation.NavConstants
+import com.example.harrypotter.ui.vm.CoreViewModel
 import kotlinx.coroutines.CoroutineScope
 
 @OptIn(ExperimentalMaterialApi::class)
