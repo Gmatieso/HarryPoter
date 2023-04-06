@@ -51,4 +51,6 @@ Android App that uses Retrofit and Jetpack Compose to easily consume a HarryPott
 ![img.png](img.png)
 ![img_1.png](img_1.png)
 ![img_2.png](img_2.png)
+## Get Your APK Here:
+https://drive.google.com/file/d/1cVbot1fJ66oIiz6Sxap74zZaZS-0BfO5/view?usp=sharing
 
