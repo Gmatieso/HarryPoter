@@ -7,7 +7,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
-import com.kenstarry.harrypotter.navigation.screens.BottomNavScreens
+import com.example.harrypotter.navigation.screens.BottomNavScreens
 
 @Composable
 fun RowScope.MainBottomNavItem(

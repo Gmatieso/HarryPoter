@@ -1,7 +1,5 @@
 package com.kenstarry.harrypotter.feature_houses.presentation
 
-import android.util.Log
-import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,16 +18,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.kenstarry.harrypotter.core.domain.model.CharacterModel
 import com.kenstarry.harrypotter.core.domain.model.CoreEvents
-import com.kenstarry.harrypotter.core.presentation.viewmodel.CoreViewModel
-import com.kenstarry.harrypotter.feature_home.domain.model.ResponseObserver
+import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
+import com.example.harrypotter.feature_home.domain.model.ResponseObserver
 import com.kenstarry.harrypotter.feature_houses.presentation.components.HousesList
 import com.kenstarry.harrypotter.feature_houses.presentation.components.HousesTopBar
-import com.kenstarry.harrypotter.navigation.Direction
-import com.kenstarry.harrypotter.navigation.screens.BottomNavScreens
+import com.example.harrypotter.navigation.Direction
+import com.example.harrypotter.navigation.screens.BottomNavScreens
 import kotlinx.coroutines.CoroutineScope
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterialApi::class)

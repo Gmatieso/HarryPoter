@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_splash_screen.presentation
+package com.example.harrypotter.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -11,11 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.kenstarry.harrypotter.R
-import com.kenstarry.harrypotter.core.presentation.components.Lottie
-import com.kenstarry.harrypotter.navigation.Direction
-import com.kenstarry.harrypotter.navigation.NavConstants
-import com.kenstarry.harrypotter.navigation.screens.Screens
+//import com.airbnb.lottie.Lottie
+import com.example.harrypotter.navigation.Direction
+import com.example.harrypotter.navigation.NavConstants
 import kotlinx.coroutines.delay
 
 @Composable
