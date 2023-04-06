@@ -11,12 +11,12 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 //  my colors
-val BackgroundLight = Color(0xfff8edeb)
-val BackgroundLightAlt = Color(0xffffffff)
+val BackgroundLight = Color(0xFFFDFCF4)
+val BackgroundLightAlt = Color(0xFFE0EACE)
 val BackgroundDark = Color(0xff2d2e2e)
 val BackgroundDarkAlt = Color(0xff0f0f0f)
 
-val accent = Color(0xffffb5a7)
-val accentLight = Color(0xfffcd5ce).copy(alpha = 0.1f)
+val accent = Color(0xFFE4E3DB)
+val accentLight = Color(0xFF223600).copy(alpha = 0.1f)
 val TextColorBlack = Color.Black
 val TextColorWhite = Color.White
