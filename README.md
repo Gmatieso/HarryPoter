@@ -48,4 +48,7 @@ Android App that uses Retrofit and Jetpack Compose to easily consume a HarryPott
 [Documentation](https://hp-api.onrender.com/)
 
 ![App Screenshot]
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 
