@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.presentation.components
+package com.example.harrypotter.core.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

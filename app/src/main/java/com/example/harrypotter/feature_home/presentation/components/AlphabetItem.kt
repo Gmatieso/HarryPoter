@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components
+package com.example.harrypotter.feature_home.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.domain.model.CharacterModel
 
 @Composable
 fun AlphabetItem(

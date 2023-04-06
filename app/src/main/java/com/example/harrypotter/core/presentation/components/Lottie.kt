@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.presentation.components
+package com.example.harrypotter.core.presentation.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

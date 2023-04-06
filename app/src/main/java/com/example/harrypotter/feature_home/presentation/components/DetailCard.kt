@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components
+package com.example.harrypotter.feature_home.presentation.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -8,7 +8,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.kenstarry.harrypotter.feature_home.presentation.model.DetailModel
+import com.example.harrypotter.feature_home.presentation.model.DetailModel
 
 @Composable
 fun DetailCard(

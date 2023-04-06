@@ -15,11 +15,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.canopas.lib.showcase.IntroShowCaseScaffold
-import com.example.harrypotter.data.remote.models.CharacterModel
-import com.kenstarry.harrypotter.feature_detail.presentation.components.DetailTopBar
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
+import com.example.harrypotter.feature_detail.presentation.components.DetailTopBar
 import com.example.harrypotter.feature_detail.domain.model.CharacterObserver
-import com.example.harrypotter.ui.vm.CoreViewModel
-import com.kenstarry.harrypotter.navigation.Direction
+import com.example.harrypotter.navigation.Direction
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -1,16 +1,14 @@
-package com.example.harrypotter.feature_categories.presentation.components
+package com.example.harrypotter.feature_categories.presentation
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
-import androidx.compose.foundation.lazy.staggeredgrid.items
 import androidx.compose.foundation.lazy.staggeredgrid.rememberLazyStaggeredGridState
+import androidx.compose.foundation.lazy.staggeredgrid.items
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.ModalBottomSheetState
-import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.School
@@ -25,11 +23,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.harrypotter.data.remote.models.BottomSheetEvents
-import com.example.harrypotter.data.remote.models.CharacterModel
-import com.example.harrypotter.data.remote.models.CoreEvents
 import com.example.harrypotter.feature_categories.presentation.util.CategoryConstants
-import com.example.harrypotter.ui.vm.CoreViewModel
+import com.example.harrypotter.feature_home.domain.model.ResponseObserver
+import com.example.harrypotter.core.domain.model.BottomSheetEvents
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.domain.model.CoreEvents
+import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
+import com.example.harrypotter.feature_categories.presentation.components.CategoryTopBar
+import com.example.harrypotter.feature_home.presentation.components.CharacterItemAlt
+import com.example.harrypotter.feature_home.presentation.util.HomeConstants
+import com.example.harrypotter.navigation.Direction
 import kotlinx.coroutines.CoroutineScope
 
 @OptIn(
@@ -142,14 +145,13 @@ fun CategoriesScreen(
                                             bottomSheetData = it
                                         )
                                     )
-                                },
-                                onHouseClicked = {}
-                            )
+                                }
+                            ) {}
                         }
                     },
                     state = gridState,
                     contentPadding = PaddingValues(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+//                    verticalArrangement = Arrangement.spacedBy(16.dp)
                 )
 
             }

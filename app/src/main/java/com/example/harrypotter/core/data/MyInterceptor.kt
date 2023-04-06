@@ -1,10 +1,9 @@
-package com.kenstarry.harrypotter.core.data
+package com.example.harrypotter.core.data
 
-import com.kenstarry.harrypotter.core.presentation.util.Constants
+import com.example.harrypotter.core.presentation.util.Constants
 import okhttp3.Interceptor
 import okhttp3.Protocol
 import okhttp3.Response
-import okhttp3.ResponseBody
 import okhttp3.ResponseBody.Companion.toResponseBody
 import okhttp3.internal.http2.ConnectionShutdownException
 import okio.IOException

@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components.search
+package com.example.harrypotter.feature_home.presentation.components.search
 
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
@@ -7,13 +7,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Clear
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -22,13 +19,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.LifecycleOwner
-import com.kenstarry.harrypotter.R
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.domain.model.CoreEvents
-import com.kenstarry.harrypotter.core.presentation.components.Lottie
-import com.kenstarry.harrypotter.core.presentation.viewmodel.CoreViewModel
-import com.kenstarry.harrypotter.feature_home.domain.model.ResponseObserver
+import com.example.harrypotter.R
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.domain.model.CoreEvents
+import com.example.harrypotter.core.presentation.components.Lottie
+import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -67,7 +62,8 @@ fun SearchingScreen(
             SearchTopBar(
                 onQueryInput = { query ->
                     //  filter the characters
-                    coreVM.onEvent(CoreEvents.SearchForCharacters(
+                    coreVM.onEvent(
+                        CoreEvents.SearchForCharacters(
                         query = query,
                         allCharacters = allCharacters,
                         filteredCharacters = {

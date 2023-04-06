@@ -4,14 +4,22 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
-import com.example.harrypotter.ui.nav.SetupNavHost
+import com.example.harrypotter.core.domain.model.BottomSheetEvents
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.presentation.components.BottomSheet
+import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
+import com.example.harrypotter.feature_home.presentation.util.HomeConstants
+import com.example.harrypotter.feature_settings.presentation.util.SettingsConstants
+import com.example.harrypotter.navigation.graphs.RootNavGraph
 import com.example.harrypotter.ui.theme.HarryPotterTheme
+import com.example.harrypotter.feature_home.presentation.components.DetailBottomSheet
+import com.example.harrypotter.feature_settings.presentation.viewmodel.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -19,23 +27,73 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private val TAG = "MainActivity"
+    @OptIn(ExperimentalMaterialApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            HarryPotterTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Surface(
-                        modifier = Modifier.fillMaxSize(),
-                        color = MaterialTheme.colors.background
-                    ) {
-                        val navController = rememberNavController()
-                        SetupNavHost(navController = navController, harryPotterViewModel= viewModel())
+
+            val settingsViewModel: SettingsViewModel = hiltViewModel()
+
+            //  setting theme using datastore
+            HarryPotterTheme(
+                darkTheme = when (settingsViewModel.themeFlow.collectAsState(initial = "").value) {
+                    SettingsConstants.themeOptions[0].title -> {
+                        //  dark theme enabled
+                        true
+                    }
+                    SettingsConstants.themeOptions[0].title -> {
+                        //  dark theme disabled
+                        false
+                    }
+                    SettingsConstants.themeOptions[0].title -> {
+                        //  follow system enabled
+                        isSystemInDarkTheme()
+                    }
+                    else -> {
+                        isSystemInDarkTheme()
                     }
                 }
+            ) {
+
+                val coreVM: CoreViewModel = hiltViewModel()
+
+                BottomSheet(
+                    sheetBackground = androidx.compose.material3.MaterialTheme.colorScheme.onPrimary,
+                    topStartRadius = 0.dp,
+                    topEndRadius = 0.dp,
+                    sheetContent = { state, scope ->
+
+                        when (coreVM.bottomSheetContent.value) {
+
+                            HomeConstants.DETAILS_BOTTOM_SHEET -> {
+                                DetailBottomSheet(
+                                    character = coreVM.bottomSheetData.value as CharacterModel,
+                                    onBackPressed = {
+                                        //  close bottomsheet
+                                        coreVM.onBottomSheetEvent(
+                                            BottomSheetEvents.CloseBottomSheet(
+                                            state = state,
+                                            scope = scope
+                                        ))
+                                    }
+                                )
+                            }
+                        }
+                    },
+                    sheetScope = { state, scope ->
+
+                        RootNavGraph(
+                            navHostController = rememberNavController(),
+                            coreViewModel = coreVM,
+                            modalSheetState = state,
+                            scope = scope
+                        )
+
+                    },
+                    closeBottomSheet = { state, scope ->
+                        coreVM.onBottomSheetEvent(BottomSheetEvents.CloseBottomSheet(state, scope))
+                    }
+                )
             }
         }
     }

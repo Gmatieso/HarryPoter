@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_settings.presentation.components.themes_section
+package com.example.harrypotter.feature_settings.presentation.components.themes_section
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
@@ -16,10 +16,10 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.kenstarry.harrypotter.feature_settings.presentation.components.SectionTitle
-import com.kenstarry.harrypotter.feature_settings.presentation.model.SettingsEvents
-import com.kenstarry.harrypotter.feature_settings.presentation.util.SettingsConstants
-import com.kenstarry.harrypotter.feature_settings.presentation.viewmodel.SettingsViewModel
+import com.example.harrypotter.feature_settings.presentation.components.SectionTitle
+import com.example.harrypotter.feature_settings.presentation.model.SettingsEvents
+import com.example.harrypotter.feature_settings.presentation.util.SettingsConstants
+import com.example.harrypotter.feature_settings.presentation.viewmodel.SettingsViewModel
 
 @Composable
 fun ThemesSection(

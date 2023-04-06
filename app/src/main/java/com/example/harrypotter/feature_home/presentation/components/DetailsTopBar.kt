@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components
+package com.example.harrypotter.feature_home.presentation.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack

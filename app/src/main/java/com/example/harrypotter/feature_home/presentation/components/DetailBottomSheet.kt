@@ -1,10 +1,7 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components
+package com.example.harrypotter.feature_home.presentation.components
 
-import android.widget.Toast
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.staggeredgrid.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,18 +13,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import com.kenstarry.harrypotter.R
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.presentation.components.CoilImage
-import com.kenstarry.harrypotter.core.presentation.components.Lottie
-import com.kenstarry.harrypotter.core.presentation.components.PillBtn
-import com.kenstarry.harrypotter.core.presentation.components.WizardImage
-import com.kenstarry.harrypotter.feature_home.presentation.model.DetailModel
+import com.example.harrypotter.R
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.presentation.components.CoilImage
+import com.example.harrypotter.core.presentation.components.Lottie
+import com.example.harrypotter.core.presentation.components.PillBtn
+import com.example.harrypotter.core.presentation.components.WizardImage
+import com.example.harrypotter.feature_home.presentation.model.DetailModel
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -170,7 +166,7 @@ fun DetailBottomSheet(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(50.dp),
-                        horizontalArrangement = Arrangement.Center
+//                        horizontalArrangement = Arrangement.Center
                     )
 
                     Spacer(modifier = Modifier.height(8.dp))
@@ -279,7 +275,7 @@ fun DetailBottomSheet(
                             .fillMaxWidth()
                             .height(500.dp),
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+//                        verticalArrangement = Arrangement.spacedBy(8.dp)
                     )
 
                 }

@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components.search
+package com.example.harrypotter.feature_home.presentation.components.search
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,11 +19,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import com.kenstarry.harrypotter.R
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.presentation.components.CoilImage
-import com.kenstarry.harrypotter.core.presentation.components.PillBtn
-import com.kenstarry.harrypotter.core.presentation.components.WizardImage
+import com.example.harrypotter.R
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.presentation.components.CoilImage
+import com.example.harrypotter.core.presentation.components.PillBtn
+import com.example.harrypotter.core.presentation.components.WizardImage
 
 @Composable
 fun SearchCharacterItem(

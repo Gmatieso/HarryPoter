@@ -1,4 +1,4 @@
-package com.example.harrypotter.presentation
+package com.example.harrypotter.feature_splash_screen.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -11,10 +11,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.airbnb.lottie.Lottie
+import com.example.harrypotter.core.presentation.components.Lottie
 //import com.airbnb.lottie.Lottie
 import com.example.harrypotter.navigation.Direction
 import com.example.harrypotter.navigation.NavConstants
 import kotlinx.coroutines.delay
+import com.example.harrypotter.R
 
 @Composable
 fun SplashScreen(

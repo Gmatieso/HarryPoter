@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_settings.presentation.components.themes_section
+package com.example.harrypotter.feature_settings.presentation.components.themes_section
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

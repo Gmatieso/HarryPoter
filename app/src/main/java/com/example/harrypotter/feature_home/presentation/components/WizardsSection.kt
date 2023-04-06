@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components
+package com.example.harrypotter.feature_home.presentation.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
@@ -15,8 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.pager.ExperimentalPagerApi
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.navigation.Direction
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.navigation.Direction
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable

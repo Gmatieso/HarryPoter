@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.model
+package com.example.harrypotter.feature_home.presentation.model
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

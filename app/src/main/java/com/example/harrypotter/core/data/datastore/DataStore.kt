@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.data.datastore
+package com.example.harrypotter.core.data.datastore
 
 import android.content.Context
 import androidx.datastore.preferences.preferencesDataStore

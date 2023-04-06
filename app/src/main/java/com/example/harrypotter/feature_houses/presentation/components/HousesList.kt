@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_houses.presentation.components
+package com.example.harrypotter.feature_houses.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,12 +15,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
-import com.kenstarry.harrypotter.core.domain.model.BottomSheetEvents
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.domain.model.CoreEvents
+import com.example.harrypotter.core.domain.model.BottomSheetEvents
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.domain.model.CoreEvents
 import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
 import com.example.harrypotter.feature_home.domain.model.ResponseObserver
-import com.kenstarry.harrypotter.feature_home.presentation.util.HomeConstants
+import com.example.harrypotter.feature_home.presentation.util.HomeConstants
 import kotlinx.coroutines.CoroutineScope
 
 @OptIn(ExperimentalMaterialApi::class)

@@ -1,12 +1,12 @@
-package com.kenstarry.harrypotter.core.data
+package com.example.harrypotter.core.data
 
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.domain.model.Spell
-import com.kenstarry.harrypotter.core.presentation.util.Constants.Companion.CHARACTERS_ENDPOINT
-import com.kenstarry.harrypotter.core.presentation.util.Constants.Companion.HOUSES_ENDPOINT
-import com.kenstarry.harrypotter.core.presentation.util.Constants.Companion.SPELLS_ENDPOINT
-import com.kenstarry.harrypotter.core.presentation.util.Constants.Companion.STAFF_ENDPOINT
-import com.kenstarry.harrypotter.core.presentation.util.Constants.Companion.STUDENTS_ENDPOINT
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.domain.model.Spell
+import com.example.harrypotter.core.presentation.util.Constants.Companion.CHARACTERS_ENDPOINT
+import com.example.harrypotter.core.presentation.util.Constants.Companion.HOUSES_ENDPOINT
+import com.example.harrypotter.core.presentation.util.Constants.Companion.SPELLS_ENDPOINT
+import com.example.harrypotter.core.presentation.util.Constants.Companion.STAFF_ENDPOINT
+import com.example.harrypotter.core.presentation.util.Constants.Companion.STUDENTS_ENDPOINT
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

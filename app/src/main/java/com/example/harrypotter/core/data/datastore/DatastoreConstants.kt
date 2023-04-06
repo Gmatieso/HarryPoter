@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.data.datastore
+package com.example.harrypotter.core.data.datastore
 
 object DatastoreConstants {
 

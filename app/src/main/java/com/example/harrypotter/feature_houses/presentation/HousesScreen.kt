@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_houses.presentation
+package com.example.harrypotter.feature_houses.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -19,12 +19,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.domain.model.CoreEvents
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.domain.model.CoreEvents
 import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
 import com.example.harrypotter.feature_home.domain.model.ResponseObserver
-import com.kenstarry.harrypotter.feature_houses.presentation.components.HousesList
-import com.kenstarry.harrypotter.feature_houses.presentation.components.HousesTopBar
+import com.example.harrypotter.feature_houses.presentation.components.HousesList
+import com.example.harrypotter.feature_houses.presentation.components.HousesTopBar
 import com.example.harrypotter.navigation.Direction
 import com.example.harrypotter.navigation.screens.BottomNavScreens
 import kotlinx.coroutines.CoroutineScope

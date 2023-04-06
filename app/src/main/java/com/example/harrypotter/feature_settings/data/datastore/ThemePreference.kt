@@ -1,11 +1,11 @@
-package com.kenstarry.harrypotter.feature_settings.data.datastore
+package com.example.harrypotter.feature_settings.data.datastore
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.kenstarry.harrypotter.core.data.datastore.DatastoreConstants
-import com.kenstarry.harrypotter.core.data.datastore.datastore
-import com.kenstarry.harrypotter.feature_settings.presentation.util.SettingsConstants
+import com.example.harrypotter.feature_settings.presentation.util.SettingsConstants
+import com.example.harrypotter.core.data.datastore.DatastoreConstants
+import com.example.harrypotter.core.data.datastore.datastore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

@@ -6,7 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.example.harrypotter.navigation.NavConstants
 import com.example.harrypotter.navigation.screens.Screens
-import com.example.harrypotter.presentation.SplashScreen
+import com.example.harrypotter.feature_splash_screen.presentation.SplashScreen
 
 
 fun NavGraphBuilder.splashNavGraph(

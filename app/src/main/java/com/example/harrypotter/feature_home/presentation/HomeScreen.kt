@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation
+package com.example.harrypotter.feature_home.presentation
 
 import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
@@ -17,18 +17,21 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.canopas.lib.showcase.IntroShowCaseScaffold
-import com.kenstarry.harrypotter.core.domain.model.BottomSheetEvents
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.domain.model.CoreEvents
-import com.kenstarry.harrypotter.core.presentation.components.WizardsShimmer
-import com.kenstarry.harrypotter.core.presentation.viewmodel.CoreViewModel
-import com.kenstarry.harrypotter.feature_categories.presentation.util.CategoryConstants
-import com.kenstarry.harrypotter.feature_home.domain.model.ResponseObserver
-import com.kenstarry.harrypotter.feature_home.presentation.components.*
-import com.kenstarry.harrypotter.feature_home.presentation.components.search.SearchingScreen
-import com.kenstarry.harrypotter.feature_home.presentation.util.HomeConstants
-import com.kenstarry.harrypotter.navigation.Direction
-import com.kenstarry.harrypotter.navigation.screens.Screens
+import com.example.harrypotter.core.presentation.components.WizardsShimmer
+import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
+import com.example.harrypotter.feature_home.domain.model.ResponseObserver
+import com.example.harrypotter.navigation.Direction
+import com.example.harrypotter.navigation.screens.Screens
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.domain.model.CoreEvents
+import com.example.harrypotter.feature_categories.presentation.util.CategoryConstants
+import com.example.harrypotter.core.domain.model.BottomSheetEvents
+import com.example.harrypotter.feature_home.presentation.components.HogwartsStaffSection
+import com.example.harrypotter.feature_home.presentation.components.HogwartsStudentsSection
+import com.example.harrypotter.feature_home.presentation.components.HomeTopBar
+import com.example.harrypotter.feature_home.presentation.components.WizardsSection
+import com.example.harrypotter.feature_home.presentation.components.search.SearchingScreen
+import com.example.harrypotter.feature_home.presentation.util.HomeConstants
 import kotlinx.coroutines.CoroutineScope
 
 @OptIn(ExperimentalMaterialApi::class, ExperimentalMaterial3Api::class)

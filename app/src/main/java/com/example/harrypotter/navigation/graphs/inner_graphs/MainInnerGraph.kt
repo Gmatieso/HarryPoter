@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.navigation.graphs.inner_graphs
+package com.example.harrypotter.navigation.graphs.inner_graphs
 
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ModalBottomSheetState
@@ -6,11 +6,11 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.kenstarry.harrypotter.core.presentation.viewmodel.CoreViewModel
-import com.kenstarry.harrypotter.feature_houses.presentation.HousesScreen
-import com.kenstarry.harrypotter.feature_home.presentation.HomeScreen
-import com.kenstarry.harrypotter.feature_settings.presentation.SettingsScreen
-import com.kenstarry.harrypotter.navigation.screens.BottomNavScreens
+import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
+import com.example.harrypotter.feature_houses.presentation.HousesScreen
+import com.example.harrypotter.feature_home.presentation.HomeScreen
+import com.example.harrypotter.feature_settings.presentation.SettingsScreen
+import com.example.harrypotter.navigation.screens.BottomNavScreens
 import kotlinx.coroutines.CoroutineScope
 
 @OptIn(ExperimentalMaterialApi::class)

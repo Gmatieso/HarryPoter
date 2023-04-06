@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_main_screen.presentation.components.bottom_nav
+package com.example.harrypotter.feature_main_screen.presentation.bottom_nav
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.*

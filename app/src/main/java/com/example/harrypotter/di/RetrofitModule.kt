@@ -1,9 +1,9 @@
 package com.example.harrypotter.di
 
-import com.example.harrypotter.data.remote.HarryPoterAPI
-import com.example.harrypotter.data.remote.MyInterceptor
-import com.example.harrypotter.domain.use_case.*
-import com.example.harrypotter.util.Constants.Companion.BASE_URL
+import com.example.harrypotter.core.presentation.util.Constants.Companion.BASE_URL
+import com.example.harrypotter.core.data.HarryPotterApi
+import com.example.harrypotter.core.data.MyInterceptor
+import com.example.harrypotter.core.domain.use_case.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -47,17 +47,15 @@ object RetrofitModule {
             .build()
     }
 
-    @Singleton
     @Provides
-    //providesHarryPoterAPI
-    fun providesHarryPoter(retrofit: Retrofit): HarryPoterAPI{
-        return retrofit.create(HarryPoterAPI::class.java)
-    }
+    @Singleton
+    fun provideHarryPotterApi(retrofit: Retrofit): HarryPotterApi =
+        retrofit.create(HarryPotterApi::class.java)
 
     @Provides
     @Singleton
     fun provideHarryPotterUseCases(
-        harryPotterApi: HarryPoterAPI
+        harryPotterApi: HarryPotterApi
     ) = HarryPotterUseCases(
         getCharacters = GetCharacters(harryPotterApi),
         getStudents = GetStudents(harryPotterApi),

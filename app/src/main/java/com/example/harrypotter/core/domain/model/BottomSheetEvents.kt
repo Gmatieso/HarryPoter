@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.domain.model
+package com.example.harrypotter.core.domain.model
 
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ModalBottomSheetState

@@ -1,4 +1,4 @@
-package com.example.harrypotter.presentation
+package com.example.harrypotter.feature_main_screen.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -13,9 +13,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.canopas.lib.showcase.IntroShowCaseScaffold
-import com.example.harrypotter.ui.vm.CoreViewModel
-import com.kenstarry.harrypotter.feature_main_screen.presentation.components.bottom_nav.MainBottomNav
-import com.kenstarry.harrypotter.navigation.graphs.inner_graphs.MainInnerGraph
+import com.example.harrypotter.core.presentation.viewmodel.CoreViewModel
+import com.example.harrypotter.feature_main_screen.presentation.bottom_nav.MainBottomNav
+import com.example.harrypotter.navigation.graphs.inner_graphs.MainInnerGraph
 import kotlinx.coroutines.CoroutineScope
 
 @OptIn(ExperimentalMaterialApi::class, ExperimentalMaterial3Api::class)

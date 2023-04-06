@@ -1,6 +1,6 @@
-package com.kenstarry.harrypotter.core.domain.use_case
+package com.example.harrypotter.core.domain.use_case
 
-import com.kenstarry.harrypotter.core.data.HarryPotterApi
+import com.example.harrypotter.core.data.HarryPotterApi
 
 class GetCharacters(
     private val harryPotterApi: HarryPotterApi

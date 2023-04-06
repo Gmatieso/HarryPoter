@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.domain.model
+package com.example.harrypotter.core.domain.model
 
 @kotlinx.serialization.Serializable
 data class Wand(

@@ -1,11 +1,11 @@
-package com.kenstarry.harrypotter.navigation.screens
+package com.example.harrypotter.navigation.screens
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.HomeWork
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.kenstarry.harrypotter.navigation.NavConstants
+import com.example.harrypotter.navigation.NavConstants
 
 sealed class BottomNavScreens(
     val route: String,

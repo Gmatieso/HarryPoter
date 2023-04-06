@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.navigation
+package com.example.harrypotter.navigation
 
 object NavConstants {
 

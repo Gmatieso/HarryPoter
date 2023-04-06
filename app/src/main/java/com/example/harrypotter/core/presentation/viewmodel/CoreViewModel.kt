@@ -1,18 +1,17 @@
-package com.kenstarry.harrypotter.core.presentation.viewmodel
+package com.example.harrypotter.core.presentation.viewmodel
 
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ModalBottomSheetValue
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.ui.text.toLowerCase
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kenstarry.harrypotter.core.domain.model.BottomSheetEvents
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.core.domain.model.CoreEvents
-import com.kenstarry.harrypotter.core.domain.model.Spell
-import com.kenstarry.harrypotter.core.domain.use_case.HarryPotterUseCases
+import com.example.harrypotter.core.domain.model.BottomSheetEvents
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.core.domain.model.CoreEvents
+import com.example.harrypotter.core.domain.use_case.HarryPotterUseCases
+import com.example.harrypotter.core.domain.model.Spell
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -103,7 +102,7 @@ class CoreViewModel @Inject constructor(
             is BottomSheetEvents.OpenBottomSheet<*> -> {
 
                 event.scope.launch {
-                    event.state.animateTo(ModalBottomSheetValue.Expanded)
+//                    event.state.animateTo(ModalBottomSheetValue.Expanded)
                 }
 
                 viewModelScope.launch {
@@ -115,7 +114,7 @@ class CoreViewModel @Inject constructor(
 
             is BottomSheetEvents.CloseBottomSheet -> {
                 event.scope.launch {
-                    event.state.animateTo(ModalBottomSheetValue.Hidden)
+//                    event.state.animateTo(ModalBottomSheetValue.Hidden)
                 }
             }
         }

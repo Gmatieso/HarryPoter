@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components.search
+package com.example.harrypotter.feature_home.presentation.components.search
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
@@ -49,7 +49,7 @@ fun SearchTopBar(
             focusedIndicatorColor = MaterialTheme.colorScheme.onPrimary,
             focusedLeadingIconColor = MaterialTheme.colorScheme.primary,
             cursorColor = MaterialTheme.colorScheme.secondary,
-            textColor = MaterialTheme.colorScheme.secondary
+//            textColor = MaterialTheme.colorScheme.secondary
         ),
         placeholder = {
             Text(text = "gryffindor, harry potter etc...")

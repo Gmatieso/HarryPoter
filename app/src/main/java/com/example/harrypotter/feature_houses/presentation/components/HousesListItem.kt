@@ -1,6 +1,5 @@
-package com.kenstarry.harrypotter.feature_houses.presentation.components
+package com.example.harrypotter.feature_houses.presentation.components
 
-import android.view.RoundedCorner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
@@ -14,8 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.kenstarry.harrypotter.core.domain.model.CharacterModel
-import com.kenstarry.harrypotter.feature_home.presentation.components.CharacterItemAlt
+import com.example.harrypotter.core.domain.model.CharacterModel
+import com.example.harrypotter.feature_home.presentation.components.CharacterItemAlt
 
 @Composable
 fun HousesListItem(
@@ -50,9 +49,8 @@ fun HousesListItem(
                     CharacterItemAlt(
                         character = it,
                         containerColor = MaterialTheme.colorScheme.onSecondary,
-                        onCharacterClicked = { onCharacterClicked(it) },
-                        onHouseClicked = { onHouseClicked(it.house) }
-                    )
+                        onCharacterClicked = { onCharacterClicked(it) }
+                    ) { onHouseClicked(it.house) }
                 }
             },
             state = listState,

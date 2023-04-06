@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.core.domain.model
+package com.example.harrypotter.core.domain.model
 
 sealed class MyResponse<out T> {
 

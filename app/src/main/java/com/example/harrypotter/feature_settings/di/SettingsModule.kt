@@ -1,7 +1,7 @@
-package com.kenstarry.harrypotter.feature_settings.di
+package com.example.harrypotter.feature_settings.di
 
 import android.content.Context
-import com.kenstarry.harrypotter.feature_settings.data.datastore.ThemePreference
+import com.example.harrypotter.feature_settings.data.datastore.ThemePreference
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

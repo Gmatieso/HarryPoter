@@ -1,4 +1,4 @@
-package com.kenstarry.harrypotter.feature_home.presentation.components
+package com.example.harrypotter.feature_home.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,8 +11,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.kenstarry.harrypotter.R
-import com.kenstarry.harrypotter.core.presentation.components.Lottie
+import com.example.harrypotter.R
+import com.example.harrypotter.core.presentation.components.Lottie
 
 @Composable
 fun ErrorMessage(
