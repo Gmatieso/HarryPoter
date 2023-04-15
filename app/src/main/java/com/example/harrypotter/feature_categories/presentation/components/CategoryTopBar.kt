@@ -8,6 +8,7 @@ import androidx.compose.material.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Category
 import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.material.icons.outlined.MoreVert
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -20,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -89,5 +91,15 @@ fun CategoryTopBar(
                 )
             }
         }
+    )
+}
+
+@Preview
+@Composable
+fun CategoryTopBarPreview() {
+    CategoryTopBar(
+        title = "Category",
+        icon = Icons.Filled.Category,
+        onBackPressed = {}
     )
 }
