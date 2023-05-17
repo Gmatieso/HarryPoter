@@ -43,6 +43,32 @@ Android App that uses Retrofit and Jetpack Compose to easily consume a HarryPott
 |:-----------------------------------|:---------------|:---------|:---------------------|
 | `https://hp-api.onrender.com/api/` | `house/:house` | `string` | **Required**.  house |
 
+<br>
+
+## 🚀 Mad Scorecard
+
+<img src="https://github.com/hongbeomi/HarryPotter/blob/master/mad_scorecard/summary.png"></img>
+
+<img src="https://github.com/hongbeomi/HarryPotter/blob/master/mad_scorecard/kotlin.png"></img>
+
+<br>
+
+## 🍴 Stable Samples 
+
+| Sample                                                       | Description                                 |
+| ------------------------------------------------------------ | ------------------------------------------- |
+| [master](https://github.com/hongbeomi/HarryPotter/tree/master) | Dependency injection with Koin              |
+| [dagger-hilt](https://github.com/hongbeomi/HarryPotter/tree/dagger-hilt) | Dependency injection with Dagger-Hilt       |
+| [app-startUp](https://github.com/hongbeomi/HarryPotter/tree/app-startup) | Initializing the app when it starts         |
+| [compose](https://github.com/hongbeomi/HarryPotter/tree/compose) | Modern toolkit for building native UI       |
+
+
+## 💎 Architecture
+
+Harry Potter does not use a Local database.
+
+![architecture](https://github.com/hongbeomi/HarryPotter/blob/master/preview/mvvm.png)
+
 ## Documentation
 
 [Documentation](https://hp-api.onrender.com/)
